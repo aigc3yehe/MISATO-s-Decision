@@ -32,7 +32,7 @@ const ProposalItem = ({ proposal, mutateAll }: { proposal: Proposal, mutateAll: 
             return
         }
         if (Number(balance.formatted) == 0) {
-            toast("You don't have any $vMSATO to vote!")
+            toast("You don't have any $vMISATO to vote!")
             return
         }
         if (!proposal?.id) {
@@ -83,7 +83,7 @@ const ProposalItem = ({ proposal, mutateAll }: { proposal: Proposal, mutateAll: 
         {
             (isLoading || !data?.data) && (
                 <div className="flex flex-col gap-1 mt-3">
-                    <button className="btn btn-neutral" onClick={voteHandle}>{isLoading || isVoting ? <span className="loading loading-spinner loading-sm" /> : `Vote(${formatCurrency(Number(balance.formatted))} $vMSATO)`} </button>
+                    <button className="btn btn-neutral" onClick={voteHandle}>{isLoading || isVoting ? <span className="loading loading-spinner loading-sm" /> : `Vote(${formatCurrency(Number(balance.formatted))} $vMISATO)`} </button>
                     <div className="text-[12px] text-gray-500">
                         This will not cost any tokens, just a signature to confirm your identity.
                     </div>
@@ -93,7 +93,7 @@ const ProposalItem = ({ proposal, mutateAll }: { proposal: Proposal, mutateAll: 
         {
             !isLoading && !!data?.data && (
                 <div>
-                    Voted ({formatCurrency(proposal?.valume ?? 0)} $vMSATO)
+                    Voted ({formatCurrency(proposal?.valume ?? 0)} $vMISATO)
                 </div>
             )
         }
