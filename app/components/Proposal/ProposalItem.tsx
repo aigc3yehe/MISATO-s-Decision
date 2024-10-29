@@ -93,7 +93,7 @@ const ProposalItem = ({ proposal, mutateAll }: { proposal: Proposal, mutateAll: 
         {
             !isLoading && !!data?.data && (
                 <div>
-                    Voted ({proposal?.valume} $vMSATO)
+                    Voted ({formatCurrency(proposal?.valume ?? 0)} $vMSATO)
                 </div>
             )
         }
