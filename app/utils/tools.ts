@@ -27,7 +27,7 @@ export function getMessage(
   return `I am voting for ${optionId} option in ${proposalId} proposal`;
 }
 
-export function formatCurrency(value: number, prefix = "$") {
+export function formatCurrency(value: number, prefix = "") {
   if (value >= 1e9) {
     return prefix + (value / 1e9).toFixed(1) + "B";
   } else if (value >= 1e6) {
