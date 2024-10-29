@@ -10,7 +10,7 @@ const OngoingProposal = () => {
     const [openModal, setOpenModal] = useState(false);
     const [info, setInfo] = useState("");
 
-    const { data, error, isLoading } = useSWR(
+    const { data, error, isLoading, mutate } = useSWR(
         "/api/db/getProposals",
         (url) => fetch(url).then((res) => res.json()), {
         revalidateOnFocus: false,
@@ -67,7 +67,7 @@ const OngoingProposal = () => {
                         <div role="tablist" className="tabs tabs-lifted">
                             <input type="radio" name={`vote-${index}`} role="tab" className="tab" aria-label="Vote" checked={true} />
                             <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-5 gap-3">
-                                <ProposalItem proposal={proposal} />
+                                <ProposalItem proposal={proposal} mutateAll={mutate}/>
                             </div>
                             <input
                                 type="radio"

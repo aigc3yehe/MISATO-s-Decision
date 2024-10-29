@@ -8,7 +8,7 @@ import { useAccount } from "wagmi";
 import { useEffect, useState } from "react";
 import { formatCurrency, formatPercentage, getMessage } from "@/app/utils/tools";
 
-const ProposalItem = ({ proposal }: { proposal: Proposal }) => {
+const ProposalItem = ({ proposal, mutateAll }: { proposal: Proposal, mutateAll: () => void }) => {
     const { balance } = useHolerStateStore();
     const [selectedOption, setSelectedOption] = useState<number>();
     const { address, isConnected } = useAccount();
@@ -53,6 +53,7 @@ const ProposalItem = ({ proposal }: { proposal: Proposal }) => {
                 return
             }
             await mutate();
+            await mutateAll();
             setIsVoting(false);
             toast("Vote success!")
         } catch (error) {

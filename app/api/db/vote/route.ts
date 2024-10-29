@@ -8,8 +8,8 @@ export async function GET(req: NextRequest, res: NextResponse) {
   const optionId = searchParams.get("optionId");
   const valume = searchParams.get("valume");
   const signature = searchParams.get("signature");
-  const result = await vote(proposalId, address, optionId, valume, signature);
   try {
+    const result = await vote(proposalId, address, optionId, valume, signature);
     return NextResponse.json({
       data: result,
       message: result ? "success" : "failed",

@@ -39,9 +39,11 @@ const Header = () => {
                     <div>
                         Donation
                     </div>
-                    <div>
-                        Github
-                    </div>
+                    <Link href="https://github.com/aigc3yehe/MISATO-s-Decision" target="_blank" prefetch={false}>
+                        <div>
+                            Github
+                        </div>
+                    </Link>
                 </div>
                 <div>
                     <ConnectButton />
