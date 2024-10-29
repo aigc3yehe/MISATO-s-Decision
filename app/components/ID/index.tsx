@@ -3,7 +3,7 @@ import Link from "next/link"
 const MisatoID = () => {
     return (
         <div className="flex flex-col">
-            <div className="flex flex-col items-center justify-center gap-[20px] border border-black p-[20px]">
+            <div className="flex flex-col items-center justify-center gap-[20px] border border-black p-[20px] rounded-2xl dark:bg-black">
                 <div className="avatar">
                     <div className="w-[90px] rounded-full">
                         <img src="/misato.png" />

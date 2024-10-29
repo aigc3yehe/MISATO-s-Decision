@@ -24,7 +24,7 @@ const OngoingProposal = () => {
             </div>}
             {
                 data?.data?.map((proposal: Proposal, index: number) => (
-                    <div key={index} className="p-[20px] xl:w-[500px] pc:w-[400px] w-[320px] border border-black flex flex-col gap-3">
+                    <div key={index} className="p-[20px] xl:w-[500px] pc:w-[400px] w-[320px] border border-black flex flex-col gap-3 rounded-2xl dark:bg-black">
                         <div className="text-[20px] font-bold">
                             {proposal?.title}
                         </div>
@@ -67,7 +67,7 @@ const OngoingProposal = () => {
                         <div role="tablist" className="tabs tabs-lifted">
                             <input type="radio" name={`vote-${index}`} role="tab" className="tab" aria-label="Vote" checked={true} />
                             <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-5 gap-3">
-                                <ProposalItem proposal={proposal} mutateAll={mutate}/>
+                                <ProposalItem proposal={proposal} mutateAll={mutate} />
                             </div>
                             <input
                                 type="radio"
