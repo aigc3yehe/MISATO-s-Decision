@@ -24,7 +24,7 @@ export function getMessage(
   optionId: string | number | null
 ) {
   if (!proposalId) return "";
-  return `I am voting for option ${optionId} in proposal #${proposalId}`;
+  return `Voting for option ${optionId} in proposal #${proposalId}`;
 }
 
 export function formatCurrency(value: number, prefix = "") {
