@@ -29,7 +29,6 @@ export default function RootLayout({
       <head>
         {/* <link rel="icon" href="/icon.png" /> */}
         {/* <link rel="apple-touch-icon" href="/icon.png" /> */}
-        <link rel="manifest" href="/manifest.json" />
         <link rel="name" href="MISATO's DECISION" />
         <link rel="description" href="" />
       </head>
